@@ -1,0 +1,14 @@
+ clear
+ exit
+ cat > domesticanimals
+ cat > packanimals
+ cat domesticanimals packanimals > animals
+ cat animals
+ mv animals humanfriends 
+ ls
+ domesticanimals  packanimals  humanfriends
+ sudo mkdir animalworld
+ sudo mv humanfriends animalworld/
+ clear
+ exit
+ history
