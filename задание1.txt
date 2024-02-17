@@ -1,0 +1,12 @@
+master@Ubuntu-MySQL-VirtualBox:~$ cat > domesticanimals
+cat,dog,parrot
+master@Ubuntu-MySQL-VirtualBox:~$ cat > packanimals
+horse,camel,donkey
+master@Ubuntu-MySQL-VirtualBox:~$ cat domesticanimals packanimals > animals
+master@Ubuntu-MySQL-VirtualBox:~$ cat animals
+master@Ubuntu-MySQL-VirtualBox:~$
+cat,dog,parrot
+horse,camel,donkey
+master@Ubuntu-MySQL-VirtualBox:~$ mv animals humanfriends
+master@Ubuntu-MySQL-VirtualBox:~$ ls
+master@Ubuntu-MySQL-VirtualBox:~$ domesticanimals  packanimals  humanfriends
