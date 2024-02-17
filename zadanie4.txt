@@ -1,0 +1,1 @@
+master@Ubuntu-MySQL-VirtualBox:~$ sudo dpkg -r mysql-server-8.0
