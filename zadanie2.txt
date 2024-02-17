@@ -1,0 +1,3 @@
+master@Ubuntu-MySQL-VirtualBox:~$ sudo mkdir animalworld
+master@Ubuntu-MySQL-VirtualBox:~$ sudo mv humanfriends animalworld/
+master@Ubuntu-MySQL-VirtualBox:~$ 
