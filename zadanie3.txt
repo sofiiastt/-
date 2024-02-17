@@ -1,0 +1,6 @@
+master@Ubuntu-MySQL-VirtualBox:~$ sudo wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+
+
+
+
+master@Ubuntu-MySQL-VirtualBox:~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
