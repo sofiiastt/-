@@ -1,0 +1,21 @@
+mysql> CREATE TABLE young_animals (
+	id not NULL
+	name varchar(50)
+	color varchar(20)
+	age varchar(50));
+
+mysql> INSERT INTO young_animals (id, name, color, age)
+	SELECT id,dog_name, colour, date_of_birth
+	CONCAT(CAST(TIMESTAMPDIFF(YEAR, date_of_birth, NOW()) AS CHAR), "years",
+	CAST(MOD(TIMESTAMPDIFF(MONTH, date_of_bith, NOW()), 14) AS CHAR), "month") AS age
+	FROM dog
+	WHERE TIMESTAMPDIFF(MONTH, date_of_birth, NOW()) BETWEEN 14 AND 22;
+
+mysql> INSERT INTO young_animals (id, name, color, age)
+	SELECT id, horse_name, colour, date_of_birth
+	CONCAT(CAST(TIMESTAMPDIFF(YEAR, date_of_birth, NOW()) AS CHAR), "years",
+	CAST(MOD(TIMESTAMPDIFF(MONTH, date_of_bith, NOW()), 14) AS CHAR), "month") AS age
+	FROM horse
+	WHERE TIMESTAMPDIFF(MONTH, date_of_birth, NOW()) BETWEEN 14 AND 22;
+
+mysql> SELECT * FROM young_animals;
