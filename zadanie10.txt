@@ -1,0 +1,9 @@
+mysql> DELETE FROM camel;
+mysql> SELECT * FROM camel;
+
+
+mysql> SELECT id,name,color
+	FROM horse
+	UNION
+	SELECT id,name,color
+	FROM donkey;
