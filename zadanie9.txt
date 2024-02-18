@@ -1,0 +1,56 @@
+
+
+mysql> INSERT INTO parrot (parrot_name, 'color', id_home)
+	VALUES
+	('Mango', 'green', 1)
+	('Lemon', 'yellow', 1)
+	
+mysql> SELECT * FROM parrot;
+
+
+
+mysql> INSERT INTO cat (cat_name, 'color', id_home)
+	VALUES
+	('Ginger', 'orange', 1)
+	('SNow', 'white', 1)
+
+mysql> SELECT * FROM cat;
+
+
+
+
+mysql> INSERT INTO dog (dog_name, 'color', id_home)
+	VALUES
+	('Sharik', 'brown', 1)
+	('Rex', 'black', 1)
+	
+mysql> SELECT * FROM dog;
+
+
+
+
+mysql> INSERT INTO horse (horse_name, 'color', id_home)
+	VALUES
+	('Burushka', 'brown', 1)
+	('Maya', 'red', 1)
+	
+mysql> SELECT * FROM horse;
+
+
+
+mysql> INSERT INTO donkey (donkey_name, 'color', id_home)
+	VALUES
+	('Miguel', 'gray', 1)
+	('Abram', 'black', 1)
+	
+mysql> SELECT * FROM donkey;
+
+
+
+mysql> INSERT INTO camel (camel_name, 'color', id_home)
+	VALUES
+	('Tisha', 'yellow', 1)
+	('Mitya', 'orange', 1)
+	
+mysql> SELECT * FROM camel;
+
