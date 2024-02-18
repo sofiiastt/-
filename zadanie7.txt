@@ -1,0 +1,4 @@
+master@Ubuntu-MySQL-VirtualBox:~$ sudo su
+root@master:/home mysql
+mysql> create database humanfriends;
+mysql> show databases;
