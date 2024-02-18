@@ -1,0 +1,159 @@
+
+CREATE TABLE `animals`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `animal_name` Varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+;
+
+
+CREATE TABLE `domesticanimals`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `home_name` Varchar(20) NOT NULL,
+  `livePlace` Varchar(20),
+  `id_animal` Int,
+  PRIMARY KEY (`id`)
+)
+;
+
+CREATE INDEX `animal_athome` ON `domestic_animal` (`id_animal`)
+;
+
+
+CREATE TABLE `cat`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `cat_name` Varchar(30) NOT NULL,
+  `date_birth` Date NOT NULL,
+  `commands` Varchar(200),
+  `color` Varchar(20),
+  `id_home` Int,
+  PRIMARY KEY (`id`)
+)
+;
+
+CREATE INDEX `cat_athome` ON `cat` (`id_home`)
+;
+
+
+CREATE TABLE `dog`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `dog_name` Varchar(30) NOT NULL,
+  `date_birth` Date NOT NULL,
+  `commands` Varchar(200),
+  `color` Varchar(20),
+  `id_home` Int,
+  PRIMARY KEY (`id`)
+)
+;
+
+CREATE INDEX `dog_athome` ON `dog` (`id_home`)
+;
+
+
+CREATE TABLE `parrot`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `parrot_name` Varchar(30) NOT NULL,
+  `date_birth` Date NOT NULL,
+  `commands` Varchar(200),
+  `color` Varchar(20),
+  `id_home` Int,
+  PRIMARY KEY (`id`)
+)
+;
+
+CREATE INDEX `parrot_athome` ON `parrot` (`id_home`)
+;
+
+
+
+CREATE TABLE `packanimals`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `pack_name` Varchar(20) NOT NULL,
+  `livePlace` Varchar(20),
+  `id_animal` Int,
+  PRIMARY KEY (`id`)
+)
+;
+
+CREATE INDEX `animal_onpack` ON `pack_animal` (`id_animal`)
+;
+
+
+
+CREATE TABLE `horse`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `name` Varchar(30) NOT NULL,
+  `date_birth` Date NOT NULL,
+  `commands` Varchar(200),
+  `color` Varchar(20),
+  `id_pack` Int,
+  PRIMARY KEY (`id`)
+)
+;
+
+CREATE INDEX `horse_onpack` ON `horse` (`id_pack`)
+;
+
+
+
+CREATE TABLE `donkey`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `name` Varchar(30) NOT NULL,
+  `date_birth` Date NOT NULL,
+  `commands` Varchar(200),
+  `color` Varchar(20),
+  `id_pack` Int,
+  PRIMARY KEY (`id`)
+)
+;
+
+CREATE INDEX `donkey_onpack` ON `donkey` (`id_pack`)
+;
+
+
+
+CREATE TABLE `camel`
+(
+  `id` Int NOT NULL AUTO_INCREMENT,
+  `name` Varchar(30) NOT NULL,
+  `date_birth` Date NOT NULL,
+  `commands` Varchar(200),
+  `color` Varchar(20),
+  `id_pack` Int,
+  PRIMARY KEY (`id`)
+)
+;
+
+CREATE INDEX `camel_onpack` ON `camel` (`id_pack`)
+;
+
+
+
+ALTER TABLE `animal_athome` ADD CONSTRAINT `animal_at_home` FOREIGN KEY (`id_animal`) REFERENCES `animal` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `cat` ADD CONSTRAINT `cat_at_home` FOREIGN KEY (`id_home`) REFERENCES `animal_home` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `dog` ADD CONSTRAINT `dog_at_home` FOREIGN KEY (`id_home`) REFERENCES `animal_home` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `parrot` ADD CONSTRAINT `parrot_at_home` FOREIGN KEY (`id_home`) REFERENCES `animal_home` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `horse` ADD CONSTRAINT `horse_on_pack` FOREIGN KEY (`id_pack`) REFERENCES `pack_animal` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `donkey` ADD CONSTRAINT `donkey_on_pack` FOREIGN KEY (`id_pack`) REFERENCES `pack_animal` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `camel` ADD CONSTRAINT `camel_on_pack` FOREIGN KEY (`id_pack`) REFERENCES `pack_animal` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
