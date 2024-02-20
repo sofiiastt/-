@@ -1,0 +1,14 @@
+mysql> SELECT * FROM (SELECT id, cat_name, dog_name, NULL as parrot_name, NULL as name, date_of_birth, commands, color FROM (
+	SELECT id, cat_name, NULL as dog_name, NULL AS parrot_name NULL AS name, date_of_birth, commands, color FROM cat
+	UNION all
+	SELECT id, NULL as cat_name, dog_name, NULL AS parrot_name, NULL AS name, date_of_birth, commands, color FROM dog) 
+	UNION all
+	SELECT id, NULL as cat_name, NULL as dog_name, parrot_name, NULL AS name, date_of_birth, commands, color FROM parrot)
+	UNION all
+
+	SELECT * FROM (
+	SELECT id, NULL AS cat_name, NULL AS dog_name, NULL AS parrot_name, name, date_of_birth, commands, color FROM horse
+	UNION ALL
+	SELECT id, NULL AS cat_name, NULL AS dog_name, NULL AS parrot_name, name, date_of_birth, commands, color FROM donkey
+	) C;
+	
