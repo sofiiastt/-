@@ -1,0 +1,9 @@
+         Animals
+            |
+  -----------------------
+   |                  |
+Domestic            Pack
+    |                 |
+-------------       -------------------
+|    |     |           |       |      |  
+Cat  Dog  Parrot     Horse   Donkey  Camel

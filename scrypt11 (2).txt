@@ -1,0 +1,6 @@
+--11
+CREATE TABLE young_animals AS
+SELECT Name, orders, birdth, species, TIMESTAMPDIFF(MONTH, birdth, CURDATE()) AS Age_in_month
+FROM animals WHERE birdth (BETWEEN 14 AND 22 MONTHS );
+ 
+SELECT * FROM young_animals;
